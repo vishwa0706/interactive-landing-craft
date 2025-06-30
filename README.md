@@ -1,12 +1,10 @@
 # Interactive Landing Craft
 
-A modern, responsive landing page built with:
+A modern, responsive landing page built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui.
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- shadcn/ui
+## 🌐 Live Demo
+
+(https://interactive-landing-craft-v2.vercel.app/)
 
 ## 📌 Features
 
