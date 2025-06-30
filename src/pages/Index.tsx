@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Star, Mail, Phone, MapPin, Check, ArrowRight, Zap, Shield, Users, Smartphone, Globe, Headphones } from 'lucide-react';
 
@@ -127,7 +126,11 @@ const Index = () => {
                     key={item.name}
                     href={item.href}
                     onClick={(e) => smoothScroll(e, item.href)}
-                    className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                    className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                      scrollY > 50 
+                        ? 'text-gray-700 hover:text-purple-600' 
+                        : 'text-white hover:text-purple-300'
+                    }`}
                   >
                     {item.name}
                   </a>
@@ -139,7 +142,11 @@ const Index = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 hover:text-purple-600 p-2"
+                className={`p-2 transition-colors duration-200 ${
+                  scrollY > 50 
+                    ? 'text-gray-700 hover:text-purple-600' 
+                    : 'text-white hover:text-purple-300'
+                }`}
               >
                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
